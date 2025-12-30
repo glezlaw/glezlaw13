@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge González, LL.M. | International Advisory</title>
+    <meta name="description" content="International advisory services for expatriates and businesses establishing in Spain. Services available in English and French.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #0A2463;
+            --light-navy: #1E3A8A;
+            --gold: #D4AF37;
+            --light-gray: #F8F9FA;
+            --medium-gray: #E5E7EB;
+            --dark-gray: #374151;
+            --white: #FFFFFF;
+            --beige: #FAF3E0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy);
+        }
+        
+        /* ===== LANDING HERO ===== */
+        .landing-hero {
+            background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.92)), 
+                        url('IMG_6824 (1) (1).jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 2rem 6rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        /* Logo Container with Integrated Flags - ADJUSTED SPACING */
+        .logo-container {
+            position: relative;
+            margin: 0 auto 3.5rem;
+            width: 220px;
+            height: 220px;
+        }
+        
+        .main-logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--gold);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background-color: var(--white);
+            padding: 8px;
+        }
+        
+        .flag-left, .flag-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        
+        /* INCREASED DISTANCE FROM LOGO */
+        .flag-left {
+            left: -60px; /* Changed from -40px to -60px */
+        }
+        
+        .flag-right {
+            right: -60px; /* Changed from -40px to -60px */
+        }
+        
+        .flag-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s ease;
+            padding: 0.9rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            min-width: 90px;
+        }
+        
+        .flag-link:hover {
+            transform: translateY(-50%) scale(1.15);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--gold);
+        }
+        
+        .flag-emoji {
+            font-size: 2.5rem; /* Slightly larger */
+            margin-bottom: 0.4rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+        }
+        
+        .flag-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.95;
+            white-space: nowrap;
+        }
+        
+        /* Main Title */
+        .landing-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+            color: var(--white);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+        
+        .landing-subtitle {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 3.5rem;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+        
+        /* Two Column Text Section - WITH JUSTIFIED TEXT */
+        .two-column-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto 4rem;
+            text-align: left;
+        }
+        
+        .text-column {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 2.5rem;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .text-column h3 {
+            font-size: 1.7rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .text-column p {
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.7;
+            margin-bottom: 1.3rem;
+            font-size: 1.05rem;
+            /* JUSTIFIED TEXT */
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .text-column p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Language Choice Buttons - UPDATED TEXT */
+        .language-buttons {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .lang-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+            min-width: 240px;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .lang-button:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .lang-button-emoji {
+            font-size: 1.6rem;
+        }
+        
+        /* ===== FOOTER ===== */
+        .landing-footer {
+            background-color: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+        
+        .landing-footer p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .two-column-text {
+                gap: 2.5rem;
+                padding: 0 1.5rem;
+                max-width: 900px;
+            }
+            
+            .text-column {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 1000px) {
+            .landing-title {
+                font-size: 2.8rem;
+            }
+            
+            .landing-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .two-column-text {
+                grid-template-columns: 1fr;
+                max-width: 700px;
+                gap: 2.5rem;
+            }
+            
+            .logo-container {
+                width: 200px;
+                height: 200px;
+            }
+            
+            /* Adjust flag spacing for tablet */
+            .flag-left {
+                left: -50px;
+            }
+            
+            .flag-right {
+                right: -50px;
+            }
+            
+            .flag-emoji {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .landing-hero {
+                padding: 4rem 1.5rem 5rem;
+            }
+            
+            .landing-title {
+                font-size: 2.5rem;
+            }
+            
+            .landing-subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 3rem;
+            }
+            
+            .logo-container {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 3rem;
+            }
+            
+            /* Stack flags on mobile */
+            .flag-left, .flag-right {
+                position: relative;
+                top: 0;
+                transform: none;
+                margin: 0.8rem;
+            }
+            
+            .flag-left {
+                left: 0;
+            }
+            
+            .flag-right {
+                right: 0;
+            }
+            
+            .flags-row {
+                display: flex;
+                justify-content: center;
+                gap: 2.5rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .flag-link {
+                padding: 0.8rem 1rem;
+                min-width: 100px;
+            }
+            
+            .flag-link:hover {
+                transform: scale(1.1);
+            }
+            
+            .text-column {
+                padding: 1.8rem;
+            }
+            
+            .text-column h3 {
+                font-size: 1.5rem;
+            }
+            
+            .language-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.8rem;
+                margin-top: 1.5rem;
+            }
+            
+            .lang-button {
+                min-width: 280px;
+                padding: 1.1rem 2.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .landing-title {
+                font-size: 2.2rem;
+            }
+            
+            .landing-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .logo-container {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .text-column {
+                padding: 1.5rem;
+            }
+            
+            .text-column p {
+                font-size: 1rem;
+            }
+            
+            .lang-button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                min-width: 260px;
+            }
+            
+            .flag-emoji {
+                font-size: 2rem;
+            }
+            
+            .flag-text {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== LANDING PAGE ===== -->
+    <div class="landing-hero">
+        <!-- Logo with Integrated Flags (MORE SPACED) -->
+        <div class="logo-container">
+            <div class="flag-left">
+                <a href="english.html" class="flag-link">
+                    <span class="flag-emoji">🇬🇧</span>
+                    <span class="flag-text">English</span>
+                </a>
+            </div>
+            
+            <img src="Escudo.jpg" alt="González Family Coat of Arms" class="main-logo">
+            
+            <div class="flag-right">
+                <a href="francais.html" class="flag-link">
+                    <span class="flag-emoji">🇫🇷</span>
+                    <span class="flag-text">Français</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Title -->
+        <h1 class="landing-title">Jorge González, LL.M.</h1>
+        <p class="landing-subtitle">Happy Expats, Peaceful Businesses</p>
+        
+        <!-- Two Column Text (JUSTIFIED) -->
+        <div class="two-column-text">
+            <!-- English Column -->
+            <div class="text-column">
+                <h3>Welcome</h3>
+                <p>With extensive knowledge in international law and deep understanding of expatriate challenges, I provide personalized solutions for individuals and businesses establishing themselves in Spain.</p>
+                <p>My practice focuses exclusively on serving the international community, offering clear guidance through tax optimization, residency planning, and legal compliance in English, French, and Spanish.</p>
+                <p>My approach combines legal expertise with a genuine understanding of the personal and professional transitions involved in relocating to a new country.</p>
+            </div>
+            
+            <!-- French Column -->
+            <div class="text-column">
+                <h3>Bienvenue</h3>
+                <p>Avec une connaissance approfondie du droit international et une compréhension des défis des expatriés, je propose des solutions personnalisées pour les particuliers et entreprises s'établissant en Espagne.</p>
+                <p>Ma pratique se concentre exclusivement sur la communauté internationale, offrant des conseils clairs en matière d'optimisation fiscale, de planification de résidence et de conformité légale en anglais, français et espagnol.</p>
+                <p>Mon approche combine expertise juridique et compréhension authentique des transitions personnelles et professionnelles liées à la relocalisation.</p>
+            </div>
+        </div>
+        
+        <!-- Language Choice Buttons (UPDATED TEXT) -->
+        <div class="language-buttons">
+            <a href="english.html" class="lang-button">
+                <span class="lang-button-emoji">🇬🇧</span>
+                <span>Start Your Spanish Journey</span>
+            </a>
+            
+            <a href="francais.html" class="lang-button">
+                <span class="lang-button-emoji">🇫🇷</span>
+                <span>Commencer Votre Projet Espagnol</span>
+            </a>
+        </div>
+        
+        <!-- NOTE: Removed the final sentence as requested -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="landing-footer">
+        <p>&copy; 2025 Jorge González, LL.M. | International Advisory for Expatriates in Spain</p>
+    </footer>
+</body>
+</html>
